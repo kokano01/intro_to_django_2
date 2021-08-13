@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    <h1>This is our new index page</h1>
+    {% for p in posts %}
+        {% if p.author == "Sung" %}
+        
+            <h2>The best instructor</h2>
+
+        {% endif %}
+
+        <!-- <h3>{{ p.title }}</h3>
+        <h5>By {{ p.author }} on {{ p.date_posted }}</h5>
+        <h5>{{ p.content }}</h5> -->
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ p.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ p.author }}</h6>
+                <p class="card-text">{{ p.content }}</p>
+                <p class="card-text">{{ p.date_posted }}</p>
+            </div>
+        </div>
+
+    {% endfor %}
+{% endblock %}

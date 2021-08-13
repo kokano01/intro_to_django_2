@@ -1,0 +1,39 @@
+footer {
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    background-color: lightblue;
+}
+
+.form-border-box {
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 2rem 1rem 1.5rem 1rem;
+}
+
+.messages {
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+    animation: success 4s ease forwards;
+}
+/* success refers to succesful creation of account */
+@keyframes success {
+    0% {
+        opacity: 0;
+        pointer-events: all;
+    }
+    10% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    90% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+.success {background-color: palegreen;}
+.info {background-color: indianred;}

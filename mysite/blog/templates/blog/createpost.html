@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<div class="form-border-box">
+    <h2>Create a Post</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="id_title" class="form-label">Title :</label>
+            <input type="text" name="title" maxlength="255" required="" class="form-control" id="id_title">
+        </div>
+        <div class="d-none">
+            <input type="text" name="author" maxlength="250" required="" value="{{ request.user.id }}" id="id_author">
+        </div>
+        <div class="mb-3">
+            <label for="id_content" class="form-label">Content :</label>
+            <textarea type="text" name="content" required="" cols="40" rows="10" class="form-control" id="id_content"></textarea>
+        </div>
+        
+        <input type="submit" value= "Post">
+    </form>
+</div>
+
+
+{% endblock %}
