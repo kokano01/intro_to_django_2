@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-bfp)1%k(*2jx964v@(jid=_#_p_hey*iaf)dvn2bj8@%fa3t(t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['koki-django-blog-launch1.herokuapp.com']
 
 
 # Application definition
